@@ -75,11 +75,11 @@ git clone https://github.com/marcotriglia/ubuntu-node-init.git
 # 	exit;
 # fi
 
-mv ubuntu-node-init/default /etc/nginx/sites-available/default
-
 # Replace placeholders in nginx config files with right variables
 sed -i "s/your_domain_name/$domain/g" default*
 sed -i "s/your_port/$port/g" default*
+
+mv ubuntu-node-init/default /etc/nginx/sites-available/default
 
 # Restart Nginx
 systemctl restart nginx
