@@ -70,10 +70,10 @@ npm install -g pm2
 git clone https://github.com/marcotriglia/ubuntu-node-init.git
 
 # Check if repo was cloned successfully
-if [ -L "ubuntu-node-init" ]; then
-	printf "FATAL ERROR: Unable to clone git repository.\n"
-	exit;
-fi
+# if [ -L "ubuntu-node-init" ]; then
+# 	printf "FATAL ERROR: Unable to clone git repository.\n"
+# 	exit;
+# fi
 
 mv ubuntu-node-init/default /etc/nginx/sites-available/default
 
