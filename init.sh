@@ -67,7 +67,7 @@ apt-get -y install nodejs build-essential nginx letsencrypt
 npm install -g pm2
 
 # Clone git repo with code
-git clone https://github.com/marcotriglia/ubuntu-node-init.git
+# git clone https://github.com/marcotriglia/ubuntu-node-init.git
 
 # Check if repo was cloned successfully
 # if [ -L "ubuntu-node-init" ]; then
@@ -76,8 +76,8 @@ git clone https://github.com/marcotriglia/ubuntu-node-init.git
 # fi
 
 # Replace placeholders in nginx config files with right variables
-sed -i "s/your_domain_name/$domain/g" default*
-sed -i "s/your_port/$port/g" default*
+sed -i "s/your_domain_name/$domain/g" ubuntu-node-init/default*
+sed -i "s/your_port/$port/g" ubuntu-node-init/default*
 
 mv ubuntu-node-init/default /etc/nginx/sites-available/default
 
