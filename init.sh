@@ -79,7 +79,7 @@ npm install -g pm2
 sed -i "s/your_domain_name/$domain/g" ubuntu-node-init/default*
 sed -i "s/your_port/$port/g" ubuntu-node-init/default*
 
-mv ubuntu-node-init/default /etc/nginx/sites-available/default
+mv ubuntu-node-init/default-ip /etc/nginx/sites-available/default
 
 # Restart Nginx
 systemctl restart nginx
