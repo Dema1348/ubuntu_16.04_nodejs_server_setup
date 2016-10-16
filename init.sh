@@ -25,18 +25,18 @@ port=3000;
 # Get option arguments
 while getopts d::sp::f flag; do
   case $flag in
-    d)
-      domain=$OPTARG;
-      ;;
-    s)
-      ssl=true;
-      ;;
-    p)
-      port=$OPTARG;
-      ;;
-    ?)
-      exit;
-      ;;
+	d)
+	  domain=$OPTARG;
+	  ;;
+	s)
+	  ssl=true;
+	  ;;
+	p)
+	  port=$OPTARG;
+	  ;;
+	?)
+	  exit;
+	  ;;
   esac
 done
 shift $(( OPTIND - 1 ));
@@ -74,8 +74,8 @@ git clone https://github.com/marcotriglia/ubuntu-node-init.git
 
 # Check if repo was cloned successfully
 # if [ -L "ubuntu-node-init" ]; then
-# 	printf "FATAL ERROR: Unable to clone git repository.\n"
-# 	exit;
+#   printf "FATAL ERROR: Unable to clone git repository.\n"
+#   exit;
 # fi
 
 # Replace placeholders in nginx config files with right variables
