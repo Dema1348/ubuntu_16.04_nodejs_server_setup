@@ -94,7 +94,7 @@ letsencrypt certonly --standalone -d $domain --agree-tos  -n
 
 # Add ssh nginx if flag is true
 if [ -n "$domain" ] && $ssl; then
-  mv "ubuntu-node-init/default-ssh" /etc/nginx/sites-enabled/default
+  mv "ubuntu-node-init/default-ssl" /etc/nginx/sites-enabled/default
 fi
 
 # Restart Nginx
