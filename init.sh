@@ -78,6 +78,9 @@ npm install -g pm2
 #   exit;
 # fi
 
+# Stop nginx
+systemctl stop nginx
+
 # Replace placeholders in nginx config files with right variables
 sed -i "s/your_domain_name/$domain/g" ubuntu-node-init/default*
 sed -i "s/your_port/$port/g" ubuntu-node-init/default*
@@ -98,7 +101,7 @@ if [ -n "$domain" ] && $ssl; then
 fi
 
 # Restart Nginx
-systemctl restart nginx
+systemctl start nginx
 
 # Allow traffic to Nginx through firewall
 ufw allow 'Nginx Full'
