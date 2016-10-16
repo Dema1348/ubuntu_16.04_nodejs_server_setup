@@ -84,9 +84,9 @@ sed -i "s/your_port/$port/g" ubuntu-node-init/default*
 
 # Add non-ssh nginx
 if [ -z "$domain" ] then
-  mv ubuntu-node-init/default-ip /etc/nginx/sites-available/default
+  mv "ubuntu-node-init/default-ip" "/etc/nginx/sites-available/default";
 else 
-  mv ubuntu-node-init/default /etc/nginx/sites-available/default
+  mv "ubuntu-node-init/default" "/etc/nginx/sites-available/default";
 fi
 
 # Get letsencrypt if ssh flag is true
