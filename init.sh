@@ -90,7 +90,7 @@ else
 fi
 
 # Get letsencrypt if ssh flag is true
-letsencrypt certonly --standalone -d $domain --agree-tos  -n
+letsencrypt certonly --standalone -d $domain --agree-tos -n --email example@domain.com
 
 # Add ssh nginx if flag is true
 if [ -n "$domain" ] && $ssl; then
