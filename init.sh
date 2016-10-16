@@ -70,7 +70,7 @@ apt-get -y install nodejs build-essential nginx letsencrypt
 npm install -g pm2
 
 # Clone git repo with code
-git clone https://github.com/marcotriglia/ubuntu-node-init.git
+# git clone https://github.com/marcotriglia/ubuntu-node-init.git
 
 # Check if repo was cloned successfully
 # if [ -L "ubuntu-node-init" ]; then
