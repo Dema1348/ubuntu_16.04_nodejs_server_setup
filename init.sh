@@ -58,6 +58,9 @@ printf "\nStarting Script\n\n"
 apt-get update
 apt-get -y upgrade
 
+# Get git
+apt-get install -y git
+
 # Get node and install it
 curl -sL https://deb.nodesource.com/setup_6.x -o nodesource_setup.sh
 bash nodesource_setup.sh
@@ -67,7 +70,7 @@ apt-get -y install nodejs build-essential nginx letsencrypt
 npm install -g pm2
 
 # Clone git repo with code
-# git clone https://github.com/marcotriglia/ubuntu-node-init.git
+git clone https://github.com/marcotriglia/ubuntu-node-init.git
 
 # Check if repo was cloned successfully
 # if [ -L "ubuntu-node-init" ]; then
@@ -79,7 +82,20 @@ npm install -g pm2
 sed -i "s/your_domain_name/$domain/g" ubuntu-node-init/default*
 sed -i "s/your_port/$port/g" ubuntu-node-init/default*
 
-mv ubuntu-node-init/default-ip /etc/nginx/sites-available/default
+# Add non-ssh nginx
+if [ -z "$domain" ] then
+  mv ubuntu-node-init/default-ip /etc/nginx/sites-available/default
+else 
+  mv ubuntu-node-init/default /etc/nginx/sites-available/default
+fi
+
+# Get letsencrypt if ssh flag is true
+letsencrypt certonly --standalone -d $domain --agree-tos  -n
+
+# Add ssh nginx if flag is true
+if [ -n "$domain" ] && $ssl; then
+  mv "ubuntu-node-init/default-ssh" /etc/nginx/sites-enabled/default
+fi
 
 # Restart Nginx
 systemctl restart nginx
