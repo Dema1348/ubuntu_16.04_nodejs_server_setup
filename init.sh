@@ -83,7 +83,7 @@ sed -i "s/your_domain_name/$domain/g" ubuntu-node-init/default*
 sed -i "s/your_port/$port/g" ubuntu-node-init/default*
 
 # Add non-ssh nginx
-if [ -z "$domain" ] then
+if [ -z "$domain" ]; then
   mv "ubuntu-node-init/default-ip" "/etc/nginx/sites-available/default";
 else 
   mv "ubuntu-node-init/default" "/etc/nginx/sites-available/default";
