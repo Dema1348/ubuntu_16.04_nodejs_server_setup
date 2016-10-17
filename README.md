@@ -13,7 +13,10 @@ Options
 
 -p port, if not specified, defaults to 3000
 
-eg. `curl -sL http://bit.ly/2dHzYgA -o init.sh && chmod 755 init.sh && ./init.sh -d test.example.com -s`
+eg. 
+```
+curl -sL http://bit.ly/2dHzYgA -o init.sh && chmod 755 init.sh && ./init.sh -d test.example.com -s
+```
 
 
 # Important Notes
