@@ -67,13 +67,10 @@ printf "\nStarting Script\n\n"
 apt-get update
 apt-get -y upgrade
 
-# Get git
-apt-get install -y git
-
 # Get node and install it
 curl -sL https://deb.nodesource.com/setup_6.x -o nodesource_setup.sh
 bash nodesource_setup.sh
-apt-get -y install nodejs build-essential nginx letsencrypt
+apt-get -y install nodejs build-essential nginx letsencrypt  git
 
 # Install pm2
 npm install -g pm2
@@ -85,9 +82,8 @@ git clone https://github.com/marcotriglia/ubuntu-node-init.git
 systemctl stop nginx
 
 # Replace placeholders in nginx config files with right variables
-sed -i "s/your_domain_name/$domain/g" ubuntu-node-init/resources/default*
-sed -i "s/your_port/$port/g" ubuntu-node-init/resources/default*
-sed -i "s/your_port/$port/g" ubuntu-node-init/resources/hello.js
+sed -i "s/your_domain_name/$domain/g" ubuntu-node-init/resources/*
+sed -i "s/your_port/$port/g" ubuntu-node-init/resources/*
 
 # Add non-ssh nginx
 if [ -z "$domain" ]; then

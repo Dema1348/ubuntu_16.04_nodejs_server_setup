@@ -37,5 +37,9 @@ This has been tested to work on Ubuntu 16.04
 If you encounter any issues please create one here
 
 
+## What is Being Installed
+Node.js, npm, build essentials, git, nginx, letsencrypt, pm2 (via npm)
+
+
 ## Thank you (& More Info)
 https://www.digitalocean.com/community/tutorials/how-to-set-up-a-node-js-application-for-production-on-ubuntu-16-04
