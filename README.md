@@ -5,7 +5,7 @@ This script makes it easy to set up an Ubuntu server for Node.js applications
 Copy-paste the following line into your terminal as superuser
 
 ```
-sudo curl -sL http://bit.ly/2dHzYgA -o init.sh && chmod 755 init.sh && ./init.sh
+sudo curl -sL http://bit.ly/2eecOA1 -o init.sh && chmod 755 init.sh && ./init.sh
 ```
 
 Options
@@ -22,7 +22,7 @@ Options
 ## Example 
 The domain is test.example.com and an SSL certificate is wanted, for which an email is required. The port will default to 3000 since the '-p' option isn't used
 ```
-sudo curl -sL http://bit.ly/2dHzYgA -o init.sh && chmod 755 init.sh && ./init.sh -d test.example.com -s -e test@example.com
+sudo curl -sL http://bit.ly/2eecOA1 -o init.sh && chmod 755 init.sh && ./init.sh -d test.example.com -s -e test@example.com
 ```
 
 ## Important
