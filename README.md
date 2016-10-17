@@ -11,24 +11,23 @@ Options
 
 -s SSL, flag (no flag = no SSL)
 
--p port, if not specified, defaults to 3000
+-e email, needed if SSL flag, '-s', is used
 
--e email, needed if SSL flag, '-s', is present
+-p port, if not specified, defaults to 3000
 
 
 # Example 
-The domain is test.example.com and an SSL certificate is wanted, for which an email is required
+The domain is test.example.com and an SSL certificate is wanted, for which an email is required. The port will default to 3000 since the '-p' option isn't used
 ```
 sudo curl -sL http://bit.ly/2dHzYgA -o init.sh && chmod 755 init.sh && ./init.sh -d test.example.com -s -e test@example.com
 ```
 
-
-# Important Notes
+# Important
 If you are using the SSL (-s) option, make sure that your domain points to both ipv4 and ipv6 addresses or letsencrypt will be unable to issue you the certificate
 
-You must run the command as superuser
+**You must run the command as superuser (sudo)**
 
-**It might take some time (even hours) for the DNS servers to point to your server.**
+**It might take some time (even hours) for the DNS servers to point to your server**
 
 This has been tested to work on Ubuntu 16.0.4
 
