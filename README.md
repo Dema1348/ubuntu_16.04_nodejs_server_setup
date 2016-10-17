@@ -32,7 +32,7 @@ If you are using the SSL (-s) option, make sure that your domain points to both 
 
 **It might take some time (even hours) for the DNS servers to point to your server**
 
-This has been tested to work on Ubuntu 16.0.4
+This has been tested to work on Ubuntu 16.04
 
 If you encounter any issues please create one here
 
