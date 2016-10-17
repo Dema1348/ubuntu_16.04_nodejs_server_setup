@@ -74,20 +74,20 @@ apt-get -y install nodejs build-essential nginx letsencrypt  git
 npm install -g pm2
 
 # Clone git repo with code
-git clone https://github.com/marcotriglia/ubuntu-node-init.git
+git clone https://github.com/marcotriglia/ubuntu_16.04_nodejs_server_setup.git
 
 # Stop nginx
 systemctl stop nginx
 
 # Replace placeholders in nginx config files with right variables
-sed -i "s/your_domain_name/$domain/g" ubuntu-node-init/src/res/*
-sed -i "s/your_port/$port/g" ubuntu-node-init/src/res/*
+sed -i "s/your_domain_name/$domain/g" ubuntu_16.04_nodejs_server_setup/src/res/*
+sed -i "s/your_port/$port/g" ubuntu_16.04_nodejs_server_setup/src/res/*
 
 # Add non-ssh nginx
 if [ -z "$domain" ]; then
-  mv "ubuntu-node-init/src/res/default-ip" "/etc/nginx/sites-available/default";
+  mv "ubuntu_16.04_nodejs_server_setup/src/res/default-ip" "/etc/nginx/sites-available/default";
 else 
-  mv "ubuntu-node-init/src/res/default" "/etc/nginx/sites-available/default";
+  mv "ubuntu_16.04_nodejs_server_setup/src/res/default" "/etc/nginx/sites-available/default";
 fi
 
 # Get letsencrypt if ssh flag is true
@@ -95,7 +95,7 @@ letsencrypt certonly --standalone -d $domain --agree-tos -n --email $email
 
 # Add ssh nginx if flag is true
 if [ -n "$domain" ] && $ssl; then
-  mv "ubuntu-node-init/src/res/default-ssl" /etc/nginx/sites-enabled/default
+  mv "ubuntu_16.04_nodejs_server_setup/src/res/default-ssl" /etc/nginx/sites-enabled/default
 fi
 
 # Update crontab
@@ -111,7 +111,7 @@ systemctl start nginx
 ufw allow 'Nginx Full'
 
 # Move needed files out of git directory (it will be deleted later)
-mv ubuntu-node-init/src/res/hello.js hello.js
+mv ubuntu_16.04_nodejs_server_setup/src/res/hello.js hello.js
 
 # Clean up
 rm init.sh
