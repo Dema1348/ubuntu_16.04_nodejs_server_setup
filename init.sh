@@ -61,8 +61,6 @@ if [ -z "$email" ] && $ssl; then
 	exit; # Comment this line out to continue executing with SSL set to false
 fi
 
-printf "\nStarting Script\n\n"
-
 # Update and upgrade OS
 apt-get update
 apt-get -y upgrade
@@ -122,5 +120,3 @@ rm -r ubuntu-node-init
 
 # Start hello.js via pm2
 pm2 start hello.js
-
-printf "\nInitialization successful\n\n"
