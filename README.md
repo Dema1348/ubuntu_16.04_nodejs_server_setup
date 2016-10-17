@@ -30,8 +30,6 @@ If you are using the SSL (-s) option, make sure that your domain points to both 
 
 **It might take some time (even hours) for the DNS servers to point to your server**
 
-This has been tested to work on Ubuntu 16.04
-
 
 ## What is Being Installed
 Node.js, npm, build essentials, git, nginx, letsencrypt, pm2 (via npm)
