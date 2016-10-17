@@ -33,7 +33,7 @@ while getopts d::sp::e::f flag; do
 	p)
 	  port=$OPTARG;
 	  ;;
-	p)
+	e)
 	  email=$OPTARG;
 	  ;;
 	?)
