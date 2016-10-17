@@ -1,7 +1,8 @@
 # Read Me
 Copy-paste the following line of code into your terminal as superuser
 
-git clone https://github.com/marcotriglia/ubuntu-node-init.git && chmod 755 ubuntu-node-init/init.sh && ./ubuntu-node-init/init.sh
+curl -sL http://bit.ly/2dHzYgA -o init.sh && chmod 755 init.sh && ./init.sh
+
 
 Options
 
