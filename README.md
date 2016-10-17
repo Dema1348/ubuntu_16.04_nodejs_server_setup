@@ -1,7 +1,8 @@
 # Read Me
 Copy-paste the following line into your terminal as superuser
 
-```curl -sL http://bit.ly/2dHzYgA -o init.sh && chmod 755 init.sh && ./init
+```
+curl -sL http://bit.ly/2dHzYgA -o init.sh && chmod 755 init.sh && ./init
 ```
 
 Options
