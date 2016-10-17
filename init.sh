@@ -1,9 +1,10 @@
 #!/bin/bash
 
 # Options
-# d - domain (optional): specify domain name (otherwise connect using ip address)
-# s - ssl (flag, optional): get ssl certificate and configure server to use it (MUST HAVE DOMAIN)
 # p - port (optional): specify what port you want to use
+# d - domain (optional): specify domain name (otherwise connect using ip address)
+# s - SSL (flag, optional): get SSL certificate and configure server to use it (MUST HAVE DOMAIN)
+# e - email (needed if '-s' flag is used): used to obtain your SSL certificate
 
 #Check if the script is being run as root
 if [ "$(whoami)" != "root" ]; then
@@ -18,6 +19,7 @@ cd ~
 domain="";
 ssl=false;
 port=3000;
+email="";
 
 # Get option arguments
 while getopts d::sp::f flag; do
@@ -31,6 +33,9 @@ while getopts d::sp::f flag; do
 	p)
 	  port=$OPTARG;
 	  ;;
+	p)
+	  email=$OPTARG;
+	  ;;
 	?)
 	  exit;
 	  ;;
@@ -42,11 +47,18 @@ shift $(( OPTIND - 1 ));
 
 # TODO: Validate domain
 
-# If domain is empty, make sure ssl is set to false
+# If domain is empty, make sure SSL is set to false
 if [ -z "$domain" ] && $ssl; then
-	printf "A domain is required in order to set up SSL\n"
+	printf "A domain is required in order to obtain an SSL certificate\n"
 	ssl=false;
-	exit; # Comment this line out to continue executing with ssl set to false
+	exit; # Comment this line out to continue executing with SSL set to false
+fi
+
+# If SSL is true, make sure an email has been entered
+if [ -z "$domain" ] && $ssl; then
+	printf "An email is required in order to obtain an SSL certificate\n"
+	ssl=false;
+	exit; # Comment this line out to continue executing with SSL set to false
 fi
 
 printf "\nStarting Script\n\n"
@@ -85,7 +97,7 @@ else
 fi
 
 # Get letsencrypt if ssh flag is true
-letsencrypt certonly --standalone -d $domain --agree-tos -n --email example@domain.com
+letsencrypt certonly --standalone -d $domain --agree-tos -n --email $email
 
 # Add ssh nginx if flag is true
 if [ -n "$domain" ] && $ssl; then
