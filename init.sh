@@ -110,6 +110,7 @@ ufw allow 'Nginx Full'
 mv ubuntu-node-init/hello.js hello.js
 
 # Clean up
+rm init.sh
 rm nodesource_setup.sh
 rm -r ubuntu-node-init
 
