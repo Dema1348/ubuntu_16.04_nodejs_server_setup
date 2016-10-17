@@ -85,15 +85,15 @@ git clone https://github.com/marcotriglia/ubuntu-node-init.git
 systemctl stop nginx
 
 # Replace placeholders in nginx config files with right variables
-sed -i "s/your_domain_name/$domain/g" ubuntu-node-init/default*
-sed -i "s/your_port/$port/g" ubuntu-node-init/default*
-sed -i "s/your_port/$port/g" ubuntu-node-init/hello.js
+sed -i "s/your_domain_name/$domain/g" ubuntu-node-init/resources/default*
+sed -i "s/your_port/$port/g" ubuntu-node-init/resources/default*
+sed -i "s/your_port/$port/g" ubuntu-node-init/resources/hello.js
 
 # Add non-ssh nginx
 if [ -z "$domain" ]; then
-  mv "ubuntu-node-init/default-ip" "/etc/nginx/sites-available/default";
+  mv "ubuntu-node-init/resources/default-ip" "/etc/nginx/sites-available/default";
 else 
-  mv "ubuntu-node-init/default" "/etc/nginx/sites-available/default";
+  mv "ubuntu-node-init/resources/default" "/etc/nginx/sites-available/default";
 fi
 
 # Get letsencrypt if ssh flag is true
@@ -101,7 +101,7 @@ letsencrypt certonly --standalone -d $domain --agree-tos -n --email $email
 
 # Add ssh nginx if flag is true
 if [ -n "$domain" ] && $ssl; then
-  mv "ubuntu-node-init/default-ssl" /etc/nginx/sites-enabled/default
+  mv "ubuntu-node-init/resources/default-ssl" /etc/nginx/sites-enabled/default
 fi
 
 # Restart Nginx
@@ -111,7 +111,7 @@ systemctl start nginx
 ufw allow 'Nginx Full'
 
 # Move needed files out of git directory (it will be deleted later)
-mv ubuntu-node-init/hello.js hello.js
+mv ubuntu-node-init/resources/hello.js hello.js
 
 # Clean up
 rm init.sh
