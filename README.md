@@ -9,7 +9,7 @@ Options
 
 -d domain, eg: -d example.com
 
--s SSL, flag (no flag = no ssl)
+-s SSL, flag (no flag = no SSL)
 
 -p port, if not specified, defaults to 3000
 
