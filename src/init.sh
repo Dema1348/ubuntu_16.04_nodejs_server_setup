@@ -116,7 +116,7 @@ mv ubuntu_16.04_nodejs_server_setup/src/res/hello.js hello.js
 # Clean up
 rm init.sh
 rm nodesource_setup.sh
-rm -r ubuntu-node-init
+rm -r ubuntu_16.04_nodejs_server_setup
 
 # Start hello.js via pm2
 pm2 start hello.js
