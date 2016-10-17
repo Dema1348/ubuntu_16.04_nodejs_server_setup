@@ -22,7 +22,7 @@ port=3000;
 email="";
 
 # Get option arguments
-while getopts d::sp::f flag; do
+while getopts d::sp::e::f flag; do
   case $flag in
 	d)
 	  domain=$OPTARG;
