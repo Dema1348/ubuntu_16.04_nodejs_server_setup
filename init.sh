@@ -104,6 +104,12 @@ if [ -n "$domain" ] && $ssl; then
   mv "ubuntu-node-init/resources/default-ssl" /etc/nginx/sites-enabled/default
 fi
 
+# Update crontab
+# crontab -e
+# append following two lines
+# 30 2 * * 1 /usr/bin/letsencrypt renew >> /var/log/le-renew.log
+# 35 2 * * 1 /bin/systemctl reload nginx
+
 # Restart Nginx
 systemctl start nginx
 
