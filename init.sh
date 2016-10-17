@@ -75,6 +75,7 @@ systemctl stop nginx
 # Replace placeholders in nginx config files with right variables
 sed -i "s/your_domain_name/$domain/g" ubuntu-node-init/default*
 sed -i "s/your_port/$port/g" ubuntu-node-init/default*
+sed -i "s/your_port/$port/g" ubuntu-node-init/hello.js
 
 # Add non-ssh nginx
 if [ -z "$domain" ]; then
