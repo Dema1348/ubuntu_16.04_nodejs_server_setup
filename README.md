@@ -1,6 +1,4 @@
 # Ubuntu 16.04 Server Setup for Node.js Apps
-This script makes it easy to set up a fresh Ubuntu server for Node.js applications
-
 ## Usage
 Copy-paste the following line into your terminal **as superuser**:
 
@@ -18,7 +16,6 @@ Options
 
 -p port, if not specified, defaults to 3000
 
-
 ## Example 
 The domain is test.example.com and an SSL certificate is wanted, for which an email is required. The port will default to 3000 since the '-p' option isn't used
 ```
@@ -30,10 +27,11 @@ If you are using the SSL (-s) option, make sure that your domain points to both 
 
 **It might take some time (even hours) for the DNS servers to point to your server**
 
-
 ## What is Being Installed
 Node.js, npm, build essentials, git, nginx, letsencrypt, pm2 (via npm)
 
-
 ## Sources and More Information
 Digital Ocean: How to Set Up a Node.js Application for Production on Ubuntu 16.04 - http://do.co/2eKG3gz
+Digital Ocean: How To Set Up and Test DNS Subdomains with DigitalOcean's DNS Panel - http://do.co/2eb4txY
+Digital Ocean: Initial Server Setup with Ubuntu 16.04 - http://do.co/2dWWXWT
+Digital Ocean: How To Create Your First DigitalOcean Droplet Virtual Server - http://do.co/2e2CyTO
