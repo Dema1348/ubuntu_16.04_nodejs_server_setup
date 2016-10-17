@@ -15,9 +15,11 @@ Options
 
 -e email, needed if SSL flag, '-s', is present
 
-Example: domain is test.example.com and request SSL certificate
+
+# Example 
+The domain is test.example.com and an SSL certificate is wanted, for which an email is required
 ```
-sudo curl -sL http://bit.ly/2dHzYgA -o init.sh && chmod 755 init.sh && ./init.sh -d test.example.com -s -d test@example.com
+sudo curl -sL http://bit.ly/2dHzYgA -o init.sh && chmod 755 init.sh && ./init.sh -d test.example.com -s -e test@example.com
 ```
 
 
