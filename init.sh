@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# TODO: Set up Git for user (ask name and email)
-# TODO: Create new user
-
 # Options
 # d - domain (optional): specify domain name (otherwise connect using ip address)
 # s - ssl (flag, optional): get ssl certificate and configure server to use it (MUST HAVE DOMAIN)
@@ -71,12 +68,6 @@ npm install -g pm2
 
 # Clone git repo with code
 git clone https://github.com/marcotriglia/ubuntu-node-init.git
-
-# Check if repo was cloned successfully
-# if [ -L "ubuntu-node-init" ]; then
-#   printf "FATAL ERROR: Unable to clone git repository.\n"
-#   exit;
-# fi
 
 # Stop nginx
 systemctl stop nginx
