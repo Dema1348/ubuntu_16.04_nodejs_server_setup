@@ -1,4 +1,4 @@
-# Ubuntu 16.04 Server Initialization for Node.js Apps
+# Ubuntu 16.04 Server Setup for Node.js Apps
 This script makes it easy to set up an Ubuntu server for Node.js applications
 
 ## Usage
