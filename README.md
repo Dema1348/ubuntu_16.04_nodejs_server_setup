@@ -2,7 +2,7 @@
 This script makes it easy to set up an Ubuntu server for Node.js applications
 
 ## Usage
-Copy-paste the following line into your terminal **as superuser**
+Copy-paste the following line into your terminal **as superuser**:
 
 ```
 sudo curl -sL http://bit.ly/2eecOA1 -o init.sh && chmod 755 init.sh && ./init.sh
