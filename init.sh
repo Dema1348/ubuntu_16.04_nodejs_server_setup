@@ -55,7 +55,7 @@ if [ -z "$domain" ] && $ssl; then
 fi
 
 # If SSL is true, make sure an email has been entered
-if [ -z "$domain" ] && $ssl; then
+if [ -z "$email" ] && $ssl; then
 	printf "An email is required in order to obtain an SSL certificate\n"
 	ssl=false;
 	exit; # Comment this line out to continue executing with SSL set to false
