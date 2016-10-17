@@ -3,6 +3,8 @@ Copy-paste the following line of code into your terminal as superuser
 
 curl -sL http://bit.ly/2dHzYgA -o init.sh && chmod 755 init.sh && ./init.sh
 
+eg. curl -sL http://bit.ly/2dHzYgA -o init.sh && chmod 755 init.sh && ./init.sh -d test.example.com -s
+
 
 Options
 
