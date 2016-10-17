@@ -2,7 +2,7 @@
 Copy-paste the following line into your terminal as superuser
 
 ```
-curl -sL http://bit.ly/2dHzYgA -o init.sh && chmod 755 init.sh && ./init.sh
+sudo curl -sL http://bit.ly/2dHzYgA -o init.sh && chmod 755 init.sh && ./init.sh
 ```
 
 Options
@@ -15,12 +15,14 @@ Options
 
 Example: domain is test.example.com and request SSL certificate
 ```
-curl -sL http://bit.ly/2dHzYgA -o init.sh && chmod 755 init.sh && ./init.sh -d test.example.com -s
+sudo curl -sL http://bit.ly/2dHzYgA -o init.sh && chmod 755 init.sh && ./init.sh -d test.example.com -s
 ```
 
 
 # Important Notes
 If you are using the SSL (-s) option, make sure that your domain points to both ipv4 and ipv6 addresses or letsencrypt will be unable to issue you the certificate
+
+You must run the command as superuser
 
 This has been tested to work on Ubuntu 16.0.4
 
