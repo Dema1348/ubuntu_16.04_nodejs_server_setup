@@ -17,7 +17,7 @@ Options
 
 Example: domain is test.example.com and request SSL certificate
 ```
-sudo curl -sL http://bit.ly/2dHzYgA -o init.sh && chmod 755 init.sh && ./init.sh -d test.example.com -s
+sudo curl -sL http://bit.ly/2dHzYgA -o init.sh && chmod 755 init.sh && ./init.sh -d test.example.com -s -d test@example.com
 ```
 
 
