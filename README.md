@@ -26,7 +26,7 @@ sudo curl -sL http://bit.ly/2eecOA1 -o init.sh && chmod 755 init.sh && ./init.sh
 ```
 
 ## Important
-If you are using the SSL (-s) option, make sure that your domain points to both ipv4 and ipv6 addresses or letsencrypt will be unable to issue you the certificate
+If you are using the SSL (-s) option, make sure that your domain points to both ipv4 and ipv6 addresses **before running the command** or letsencrypt will be unable to issue you the certificate
 
 **It might take some time (even hours) for the DNS servers to point to your server**
 
