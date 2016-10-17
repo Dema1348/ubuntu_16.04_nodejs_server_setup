@@ -32,6 +32,9 @@ Node.js, npm, build essentials, git, nginx, letsencrypt, pm2 (via npm)
 
 ## Sources and More Information
 Digital Ocean: How to Set Up a Node.js Application for Production on Ubuntu 16.04 - http://do.co/2eKG3gz
+
 Digital Ocean: How To Set Up and Test DNS Subdomains with DigitalOcean's DNS Panel - http://do.co/2eb4txY
+
 Digital Ocean: Initial Server Setup with Ubuntu 16.04 - http://do.co/2dWWXWT
+
 Digital Ocean: How To Create Your First DigitalOcean Droplet Virtual Server - http://do.co/2e2CyTO
