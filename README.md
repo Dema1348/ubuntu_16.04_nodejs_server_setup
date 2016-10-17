@@ -20,7 +20,7 @@ curl -sL http://bit.ly/2dHzYgA -o init.sh && chmod 755 init.sh && ./init.sh -d t
 
 
 # Important Notes
-If you are using the SSL (-s) option, make sure that your domain points to both the ipv4 AND ipv6 addresses or letsencrypt will be unable to issue you the certificate
+If you are using the SSL (-s) option, make sure that your domain points to both ipv4 and ipv6 addresses or letsencrypt will be unable to issue you the certificate
 
 This has been tested to work on Ubuntu 16.0.4
 
