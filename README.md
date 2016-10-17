@@ -13,6 +13,8 @@ Options
 
 -p port, if not specified, defaults to 3000
 
+-e email, needed if SSL flag, '-s', is present
+
 Example: domain is test.example.com and request SSL certificate
 ```
 sudo curl -sL http://bit.ly/2dHzYgA -o init.sh && chmod 755 init.sh && ./init.sh -d test.example.com -s
