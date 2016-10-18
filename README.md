@@ -27,6 +27,8 @@ If you are using the SSL (-s) option, make sure that your domain points to both 
 
 **It might take some time (even hours) for the DNS servers to point to your server**
 
+If you wish to renew your SSL certificate every month, take a look at issue 'SSL Renewal' - http://bit.ly/2ecB0oB
+
 ## What is Being Installed
 Node.js, npm, build essentials, git, nginx, letsencrypt, pm2 (via npm)
 
