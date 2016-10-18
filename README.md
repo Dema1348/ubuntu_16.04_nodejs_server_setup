@@ -3,7 +3,7 @@
 Copy-paste the following line into your terminal **as superuser**:
 
 ```
-sudo curl -sL http://bit.ly/2efNSqZ -o init.sh && chmod 755 init.sh && ./init.sh
+curl -sL http://bit.ly/2efNSqZ -o init.sh && chmod 755 init.sh && ./init.sh
 ```
 
 Options
